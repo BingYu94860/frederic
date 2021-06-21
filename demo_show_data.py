@@ -10,15 +10,9 @@ from django.core.paginator import Paginator
 # post.save()
 
 posts = Post.objects.all()
-
 print(f'\nPost class 內資料: {posts}')
 
-
-p = Paginator(posts, 20)
-
-print(f'\n Paginator(posts, 20) {p}')
-
-for i, post in enumerate(posts[:20]):
+for i, post in enumerate(posts):
     #print(f'\n第 {i} 筆 Post 資料')
     print(f'{i} 事故時間: {post.K_time} 發生地點: {post.K_location} 死亡人數: {post.K_death} 受傷人數: {post.K_injure}')
 #print('\n')
