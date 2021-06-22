@@ -124,3 +124,6 @@ STATIC_URL = '/static/'
 #    os.path.join(BASE_DIR, 'staticfiles'),
 #)
 django_heroku.settings(locals())
+
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 102400 # higher than the count of fields
